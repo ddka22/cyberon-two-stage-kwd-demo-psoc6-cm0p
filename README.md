@@ -29,7 +29,7 @@ Install a terminal emulator if you don't have one. Instructions in this document
 
 ## Obtaining License File
 
-Send your chipset ID to [license@cyberon.com.tw](mailto:license@cyberon.com.tw) to obtain a license file for the Cyberon keyword detection engine. The chipset ID can be accessed by executing the demo package.
+Go to [Cyberon DSpotter License for Infineon Platform](https://license.cyberon.tw/InfineonDSpotterLicense/InfineonDSpotterLicense.php) to obtain a license file for the Cyberon keyword detection engine. The chipset ID can be accessed by executing the demo package.
 
 ## Using the Demo Package
 
@@ -137,7 +137,8 @@ There are two types of recognition:
 1. Go to [Cyberon DSMT Tool V2 Help](https://tool.cyberon.com.tw/DSMT_V2/index.php?lang=en) to learn DSpotter Modeling Tool(DSMT) interface, and download the application here.
 2. Log in DSMT with trial account below:
    - Account: infineon_trial@cyberon.com.tw
-   - Password: RhNh76mt
+   - Password: 
+   - Keep password field blank.
 3. Note that the DSMT account will work only on the Windows PC.
 4. Create a project, add trigger word into Group 1, and add commands into Group 2 for two-stage recognition, then save project. The model bin file named **[project_name]_pack_withTxt.bin** will be generated under this project path.
 

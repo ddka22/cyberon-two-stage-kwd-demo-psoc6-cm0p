@@ -42,11 +42,11 @@ int main(void)
     uint64_t uid;
     cy_rslt_t result;
 
-	result = cybsp_init() ;
-	if (result != CY_RSLT_SUCCESS)
-	{
-		CY_ASSERT(0);
-	}
+    result = cybsp_init() ;
+    if (result != CY_RSLT_SUCCESS)
+    {
+        CY_ASSERT(0);
+    }
 
     __enable_irq();
     Cy_IPC_Sema_Set(SEMA_NUM, false);
@@ -86,16 +86,16 @@ int main(void)
     sprintf(print_message, "uniqueIdHi: 0x%08lX, uniqueIdLo: 0x%08lX\r\n", (uint32_t)(uid >> 32), (uint32_t)(uid << 32 >> 32));
     Cy_SCB_UART_PutString(CYBSP_UART_HW, print_message);
 
-	if(!cyberon_asr_init(asr_callback))
-		while(1);
+    if(!cyberon_asr_init(asr_callback))
+        while(1);
 
-    printf("\r\nAwaiting voice input trigger command (\"Hello CyberVoice\"):\r\n");
+    Cy_SCB_UART_PutString(CYBSP_UART_HW, "\r\nAwaiting voice input trigger command (\"Hello CyberVoice\"):\r\n");
 
-	while(1)
+    while(1)
     {
         if(pdm_pcm_flag)
         {
-        	pdm_pcm_flag = 0;
+            pdm_pcm_flag = 0;
             cyberon_asr_process(pdm_pcm_buffer, FRAME_SIZE);
         }
     }
@@ -122,8 +122,8 @@ void pdm_pcm_isr_handler(void)
 
 void asr_callback(const char *function, char *message, char *parameter)
 {
-	char print_message[128];
+    char print_message[128];
 
-	sprintf(print_message, "[%s]%s(%s)\r\n", function, message, parameter);
-	Cy_SCB_UART_PutString(CYBSP_UART_HW, print_message);
+    sprintf(print_message, "[%s]%s(%s)\r\n", function, message, parameter);
+    Cy_SCB_UART_PutString(CYBSP_UART_HW, print_message);
 }

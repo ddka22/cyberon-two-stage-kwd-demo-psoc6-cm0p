@@ -80,7 +80,6 @@ Backup*
 *.dep
 
 # Compiled Binaries
-*.bin
 *.elf
 *.hex
 *.map

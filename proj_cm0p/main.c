@@ -16,6 +16,7 @@
 #include "cy_pdl.h"
 #include "ipc_def.h"
 #include "cycfg.h"
+#include "cybsp.h"
 
 #include "cyberon_asr.h"
 
@@ -39,6 +40,13 @@ int main(void)
 {
     char print_message[128];
     uint64_t uid;
+    cy_rslt_t result;
+
+	result = cybsp_init() ;
+	if (result != CY_RSLT_SUCCESS)
+	{
+		CY_ASSERT(0);
+	}
 
     __enable_irq();
     Cy_IPC_Sema_Set(SEMA_NUM, false);
@@ -80,6 +88,8 @@ int main(void)
 
 	if(!cyberon_asr_init(asr_callback))
 		while(1);
+
+    printf("\r\nAwaiting voice input trigger command (\"Hello CyberVoice\"):\r\n");
 
 	while(1)
     {

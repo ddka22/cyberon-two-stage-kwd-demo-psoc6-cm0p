@@ -142,7 +142,7 @@ There are two types of recognition:
    - Password: 
    - Keep password field blank.
 3. Note that the DSMT account will work only on the Windows PC.
-4. Create a project, add trigger word into Group 1, and add commands into Group 2 for two-stage recognition, then save project. The model bin file named **[project_name]_pack_withTxt.bin** will be generated under this project path.
+4. Create a project, add trigger word into Group 1, and add commands into Group 2 for two-stage recognition. After confirming all keywords, please go to the **Extra Output** box at the right bottom, check the **Command Text** to pack the model with files of command text, then click **Save Project**. The model bin file named **[project_name]_pack_withTxt.bin** will be generated under this project path.
 
 Find more details about DSMT in the following tutorial materials:
 - [DSMT Tutorial Slide](https://drive.google.com/file/d/1kWrJ7OXgHTF4YPft6WRHeVlXVCGiqTNx/view)

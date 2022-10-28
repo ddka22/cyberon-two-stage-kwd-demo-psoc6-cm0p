@@ -4,20 +4,20 @@ This demo package demonstrates how to use Cyberon keyword detection engine for C
 
 ## Requirements
 
-- [ModusToolbox® software](https://www.cypress.com/products/modustoolbox-software-environment) v2.2
-- Board Support Package (BSP) minimum required version: 2.0.0
-- Programming Language: C  
-- Associated Parts: All [PSoC® 6 MCU](http://www.cypress.com/PSoC6) parts
+- [ModusToolbox&trade; software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) v3.0 or later (tested with v3.0)
+- PSoC&trade; 6 Board support package (BSP) minimum required version: 4.0.0
+- Programming language: C
+- Associated parts: All [PSoC&trade; 6 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-6-32-bit-arm-cortex-m4-mcu) and [XMC7000 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-industrial-microcontroller-based-on-arm-cortex-m/) parts
 
 ## Supported Toolchains (make variable 'TOOLCHAIN')
 
-- GNU Arm® Embedded Compiler v9.3.1 (GCC_ARM) - Default value of `TOOLCHAIN`
-- Arm compiler v6.11 (ARM)
-- IAR C/C++ compiler v8.42.2 (IAR)
+- GNU Arm® embedded compiler v10.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
+- Arm&reg; compiler v6.13 (`ARM`)
+- IAR C/C++ compiler v8.42.2 (`IAR`)
 
 ## Supported Kits (make variable 'TARGET')
 
-- [PSoC 62S2 Wi-Fi BT Pioneer Kit](https://www.cypress.com/CY8CKIT-062S2-43012) (CY8CKIT-062S2-43012)
+- [PSoC&trade; 62S2 Wi-Fi Bluetooth&reg; pioneer kit](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-43012/) (`CY8CKIT-062S2-43012`)
 
 ## Hardware Setup
 
@@ -112,6 +112,8 @@ Various CLI tools include a `-h` option that prints help information to the term
       ```
       make program TARGET=CY8CKIT-062S2-43012 TOOLCHAIN=GCC_ARM
       ```
+
+   ![serial-terminal](./images/serial-terminal.png)
 
 There are two types of recognition:
 
